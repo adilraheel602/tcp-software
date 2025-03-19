@@ -1,8 +1,9 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import quote from "../Images/quote.png";
-import OwlCarousel from "react-owl-carousel3";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const reviews = [
   {
@@ -25,51 +26,44 @@ const reviews = [
   },
 ];
 
-const options = {
-  loop: true,
-  margin: 20,
-  autoplay: true,
-  autoplayTimeout: 3000, // Auto-swipe every 3 seconds
-  autoplayHoverPause: true,
-  smartSpeed: 1000,
-  nav: false,
-  dots: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    768: {
-      items: 2,
-    },
-    1024: {
-      items: 3,
-    },
-  },
-};
-
 const ReviewsCarousel = () => {
   return (
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-6">
         Our customers love us...
       </h2>
-      <OwlCarousel {...options} className="owl-theme">
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        spaceBetween={20}
+        slidesPerView={1}
+        breakpoints={{
+          768: { slidesPerView: 2 }, // Show 2 slides on tablets
+          1024: { slidesPerView: 3 }, // Show 3 slides on large screens
+        }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        pagination={{ clickable: true }}
+        className="pb-10"
+      >
         {reviews.map((review, index) => (
-          <div key={index} className="p-6 border rounded-lg shadow-md">
-            <div className="quote-icon-container mb-4">
+          <SwiperSlide
+            key={index}
+            className="p-6 border rounded-lg shadow-md bg-white"
+          >
+            <div className="mb-4">
               <img
-                className="quote-icon w-8 h-8 object-contain opacity-60"
+                className="w-8 h-8 object-contain opacity-60"
                 src={quote}
-                alt="quotesymbol"
+                alt="quote symbol"
               />
             </div>
             <p className="text-gray-600 italic mb-4">"{review.quote}"</p>
             <hr className="my-2 border-blue-300 w-12" />
             <p className="text-gray-800 font-semibold">{review.name}</p>
             <p className="text-sm text-gray-500">{review.position}</p>
-          </div>
+          </SwiperSlide>
         ))}
-      </OwlCarousel>
+      </Swiper>
     </div>
   );
 };
