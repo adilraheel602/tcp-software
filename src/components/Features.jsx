@@ -9,6 +9,7 @@ import laquinta from "../Images/laquinta.png";
 import google from "../Images/google.png";
 import hampton from "../Images/hampton.png";
 import composite from "../Images/composite.png";
+import composite01 from "../Images/composite01.png";
 
 const Features = () => {
   return (
@@ -92,7 +93,6 @@ const Features = () => {
                 alt="Schedule"
               />
             </div>
-
             {/* Right Side - Content */}
             <div className="w-full lg:w-1/2 p-4 md:p-8 lg:p-12">
               <h1 className="text-xl font-semibold">Humanity Schedule</h1>
@@ -135,6 +135,64 @@ const Features = () => {
               <button className="mt-6 md:mt-8 w-full md:w-auto bg-blue-500 text-white hover:bg-blue-900 px-6 py-3 rounded-lg">
                 Learn about Humanity Schedule
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* next page section */}
+      <div className="w-full min-h-screen bg-[#EEFEFD]">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row px-4 md:px-8 gap-8">
+            {/* Right Side - Content */}
+            <div className="w-full lg:w-1/2 p-4 md:p-8 lg:p-12">
+              <h1 className="text-2xl font-semibold">TimeClock Plus</h1>
+              <h2 className="text-2xl md:text-4xl font-bold mt-2">
+                Automatic employee time tracking
+              </h2>
+              <p className="text-lg md:text-xl py-4 md:py-6">
+                Automated time and attendance with accurate calculations,
+                eliminate hidden costs, inaccuracies, and inefficiencies.
+              </p>
+              <ol className="space-y-3 md:space-y-4">
+                <li>
+                  ✅ View detailed information about absences and missing
+                  punches during a specified date range
+                </li>
+                <li>
+                  ✅ TimeClock Plus handles complex, rule-based payroll
+                  calculations, leave and accrual management, and payroll prep
+                </li>
+              </ol>
+
+              <div className="mt-8 md:mt-16 text-base md:text-lg">
+                <p className="italic border-l-2 border-blue-400 pl-4 md:pl-6 text-gray-700">
+                  “TCP helped the Jasper County Board of Education reduce their
+                  entire payroll process from four days to two hours.”
+                </p>
+                <div className="mt-4 ml-4 md:ml-6">
+                  <p className="text-xs md:text-sm font-semibold text-gray-900">
+                    Gary Jenkins
+                  </p>
+                  <p className="text-xs md:text-sm text-gray-700">
+                    Payroll & Personnel Officer
+                  </p>
+                  <p className="text-xs md:text-sm text-gray-700">
+                    Jasper County Board of Education
+                  </p>
+                </div>
+              </div>
+
+              <button className="mt-6 md:mt-8 w-full md:w-auto bg-blue-500 text-white hover:bg-blue-900 px-6 py-3 rounded-lg">
+                Learn about TimeClock Plus
+              </button>
+            </div>
+            {/* Left Side - Image */}
+            <div className="w-full lg:w-1/2 flex justify-center items-center">
+              <img
+                className="w-full h-auto object-contain max-w-2xl"
+                src={composite01}
+                alt="Schedule"
+              />
             </div>
           </div>
         </div>
