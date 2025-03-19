@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import quote from "../Images/quote.png";
+import quote from "../Images/Quote.png";
 
 const reviews = [
   {
